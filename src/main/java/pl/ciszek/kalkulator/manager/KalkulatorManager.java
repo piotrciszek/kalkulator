@@ -7,11 +7,14 @@ public class KalkulatorManager {
 
     private double liczbaWyswietlana = 0.0;
     private double liczbaWPamieci = 0.0;
-    private char operacja;
+    private char operacja = 'C';
 
 
     public double oblicz(char znak) {
-
+        if ('0' <= znak && znak <= '9') {
+            liczbaWyswietlana = liczbaWyswietlana * 10 + Double.parseDouble("" + znak);
+            return liczbaWyswietlana;
+        }
         switch (operacja) {
             case '+':
                 liczbaWPamieci += liczbaWyswietlana;

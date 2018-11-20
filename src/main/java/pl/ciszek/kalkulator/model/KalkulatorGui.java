@@ -21,7 +21,7 @@ public class KalkulatorGui extends UI implements Button.ClickListener{
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         GridLayout layout = new GridLayout(4,5);
-        layout.addComponent(display);
+        layout.addComponent(display, 0, 0, 3, 0);
 
         String[] operacje = new String[]{"7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", "=", "C", "+"};
 
